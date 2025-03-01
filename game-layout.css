@@ -48,3 +48,48 @@ p {
     right: 30.5vw;
     transform: rotate(-6deg);
 }
+
+.heart, .spade, .club, .diamond {
+    position: absolute;
+    width: 3.5vw;
+    height: 11.25vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.15vw;
+    border-radius: 0.4vw;
+    background-color: white;
+    line-height: 11.25vh;
+}
+
+.value {
+    font-size: 3vw;
+}
+
+.top-suit, .bottom-suit {
+    position: absolute;
+    font-size: 1vw;
+    width: 0.75vw;
+    height: 1.5vh;
+    line-height: 1.5vh;
+}
+
+.top-suit {
+    left: 0.1vw;
+    top: 0.1vh;
+}
+
+.bottom-suit {
+    right: 0.1vw;
+    bottom: 0.3vh;
+}
+
+.chip {
+    position: absolute;
+    width: 4vw;
+    height: 8vh;
+}
+
+.chip-img {
+    width: 4vw;
+    height: 8vh;
+}
