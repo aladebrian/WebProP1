@@ -7,31 +7,44 @@ body {
     text-align: center;
 }
 
+p {
+    margin: 0;
+}
+
 #player-1, #player-2, #player-3, #player-4 {
     position: absolute;
     color: white;
     font-size: 2.5vw;
+    width: 10vw;
+    height: 15vh;
+    line-height: 15vh;
+}
+
+#player-3 p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #player-1 {
-    bottom: 13vh;
-    left: 20.5vw;
+    bottom: 14vh;
+    left: 16.5vw;
     transform: rotate(12deg);
 }
 
 #player-2 {
-    bottom: 9vh;
-    left: 35vw;
+    bottom: 10vh;
+    left: 30.5vw;
     transform: rotate(6deg);
 }
 
 #player-3 {
-    bottom: 2vh;
-    right: 46.5vw;
+    bottom: 5vh;
+    right: 45vw;
 }
 
 #player-4 {
-    bottom: 9vh;
-    right: 35vw;
+    bottom: 10vh;
+    right: 30.5vw;
     transform: rotate(-6deg);
 }
