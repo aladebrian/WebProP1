@@ -1,0 +1,37 @@
+body {
+    background-image: url("board.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#player-1, #player-2, #player-3, #player-4 {
+    position: absolute;
+    color: white;
+    font-size: 2.5vw;
+}
+
+#player-1 {
+    bottom: 13vh;
+    left: 20.5vw;
+    transform: rotate(12deg);
+}
+
+#player-2 {
+    bottom: 9vh;
+    left: 35vw;
+    transform: rotate(6deg);
+}
+
+#player-3 {
+    bottom: 2vh;
+    right: 46.5vw;
+}
+
+#player-4 {
+    bottom: 9vh;
+    right: 35vw;
+    transform: rotate(-6deg);
+}
