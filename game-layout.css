@@ -40,12 +40,12 @@ p {
 
 #player-3 {
     bottom: 5vh;
-    right: 45vw;
+    left: 45vw;
 }
 
 #player-4 {
     bottom: 10vh;
-    right: 30.5vw;
+    left: 59.5vw;
     transform: rotate(-6deg);
 }
 
@@ -85,11 +85,11 @@ p {
 
 .chip {
     position: absolute;
-    width: 4vw;
-    height: 8vh;
+    width: 3.5vw;
+    height: 7vh;
 }
 
 .chip-img {
-    width: 4vw;
-    height: 8vh;
+    width: 3.5vw;
+    height: 7vh;
 }
