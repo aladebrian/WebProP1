@@ -1,179 +1,179 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <title>Blackjack Animation: Game Start</title>
+    <head>
+        <title>Blackjack Animation: Game Start</title>
 
-    <meta charset="UTF-8" />
+        <meta charset="UTF-8" />
 
-    <link rel="stylesheet" type="text/css" href="game-layout.css" />
-    <link rel="stylesheet" type="text/css" href="stand-animation.css" />
-  </head>
+        <link rel="stylesheet" type="text/css" href="game-layout.css" />
+        <link rel="stylesheet" type="text/css" href="stand-animation.css" />
+    </head>
 
-  <body>
-    <!--Player 1 Nametage-->
-    <div id="player-1">
-      <p>1</p>
-    </div>
+    <body>
+        <!--Player 1 Nametage-->
+        <div id="player-1">
+            <p>1</p>
+        </div>
 
-    <!--Player 2 Nametage-->
-    <div id="player-2">
-      <p>2</p>
-    </div>
+        <!--Player 2 Nametage-->
+        <div id="player-2">
+            <p>2</p>
+        </div>
 
-    <!--Player 3 Nametage-->
-    <div id="player-3">
-      <p>
-        3<br />
-        (You)
-      </p>
-    </div>
+        <!--Player 3 Nametage-->
+        <div id="player-3">
+            <p>
+                3<br />
+                (You)
+            </p>
+        </div>
 
-    <!--Player 4 Nametage-->
-    <div id="player-4">
-      <p>4</p>
-    </div>
+        <!--Player 4 Nametage-->
+        <div id="player-4">
+            <p>4</p>
+        </div>
 
-    <!--6 of Hearts-->
-    <div id="heart-6" class="heart">
-      <span class="value">6</span>
+        <!--6 of Hearts-->
+        <div id="heart-6" class="heart">
+            <span class="value">6</span>
 
-      <span class="top-suit">&#9829;</span>
+            <span class="top-suit">&#9829;</span>
 
-      <span class="bottom-suit">&#9829;</span>
-    </div>
+            <span class="bottom-suit">&#9829;</span>
+        </div>
 
-    <!--7 of Spades-->
-    <div id="spade-7" class="spade">
-      <span class="value">7</span>
+        <!--7 of Spades-->
+        <div id="spade-7" class="spade">
+            <span class="value">7</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--9 of Spades-->
-    <div id="spade-9" class="spade">
-      <span class="value">9</span>
+        <!--9 of Spades-->
+        <div id="spade-9" class="spade">
+            <span class="value">9</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--8 of Diamonds-->
-    <div id="diamond-8" class="diamond">
-      <span class="value">8</span>
+        <!--8 of Diamonds-->
+        <div id="diamond-8" class="diamond">
+            <span class="value">8</span>
 
-      <span class="top-suit">&#9830;</span>
+            <span class="top-suit">&#9830;</span>
 
-      <span class="bottom-suit">&#9830;</span>
-    </div>
+            <span class="bottom-suit">&#9830;</span>
+        </div>
 
-    <!--8 of Spades-->
-    <div id="spade-8" class="spade">
-      <span class="value">8</span>
+        <!--8 of Spades-->
+        <div id="spade-8" class="spade">
+            <span class="value">8</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--3 of Diamonds-->
-    <div id="diamond-3" class="diamond">
-      <span class="value">3</span>
+        <!--3 of Diamonds-->
+        <div id="diamond-3" class="diamond">
+            <span class="value">3</span>
 
-      <span class="top-suit">&#9830;</span>
+            <span class="top-suit">&#9830;</span>
 
-      <span class="bottom-suit">&#9830;</span>
-    </div>
+            <span class="bottom-suit">&#9830;</span>
+        </div>
 
-    <!--1 of Hearts-->
-    <div id="heart-1" class="heart">
-      <span class="value">1</span>
+        <!--1 of Hearts-->
+        <div id="heart-1" class="heart">
+            <span class="value">1</span>
 
-      <span class="top-suit">&#9829;</span>
+            <span class="top-suit">&#9829;</span>
 
-      <span class="bottom-suit">&#9829;</span>
-    </div>
+            <span class="bottom-suit">&#9829;</span>
+        </div>
 
-    <!--King of Spades-->
-    <div id="spade-K" class="spade">
-      <span class="value">K</span>
+        <!--King of Spades-->
+        <div id="spade-K" class="spade">
+            <span class="value">K</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--Jack of Diamonds-->
-    <div id="diamond-J" class="diamond">
-      <span class="value">J</span>
+        <!--Jack of Diamonds-->
+        <div id="diamond-J" class="diamond">
+            <span class="value">J</span>
 
-      <span class="top-suit">&#9830;</span>
+            <span class="top-suit">&#9830;</span>
 
-      <span class="bottom-suit">&#9830;</span>
-    </div>
+            <span class="bottom-suit">&#9830;</span>
+        </div>
 
-    <!--2 of Spades-->
-    <div id="spade-2" class="spade">
-      <span class="value">2</span>
+        <!--2 of Spades-->
+        <div id="spade-2" class="spade">
+            <span class="value">2</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--Queen of Spades-->
-    <div id="spade-Q" class="spade">
-      <span class="value">Q</span>
+        <!--Queen of Spades-->
+        <div id="spade-Q" class="spade">
+            <span class="value">Q</span>
 
-      <span class="top-suit">&#9824;</span>
+            <span class="top-suit">&#9824;</span>
 
-      <span class="bottom-suit">&#9824;</span>
-    </div>
+            <span class="bottom-suit">&#9824;</span>
+        </div>
 
-    <!--6 of Diamonds-->
-    <div id="diamond-6" class="diamond">
-      <span class="value">6</span>
+        <!--6 of Diamonds-->
+        <div id="diamond-6" class="diamond">
+            <span class="value">6</span>
 
-      <span class="top-suit">&#9830;</span>
+            <span class="top-suit">&#9830;</span>
 
-      <span class="bottom-suit">&#9830;</span>
-    </div>
+            <span class="bottom-suit">&#9830;</span>
+        </div>
 
-    <!--Ace of Hearts-->
-    <div id="heart-A" class="heart">
-      <span class="value">A</span>
+        <!--Ace of Hearts-->
+        <div id="heart-A" class="heart">
+            <span class="value">A</span>
 
-      <span class="top-suit">&#9829;</span>
+            <span class="top-suit">&#9829;</span>
 
-      <span class="bottom-suit">&#9829;</span>
-    </div>
+            <span class="bottom-suit">&#9829;</span>
+        </div>
 
-    <!--Playing Chip-->
-    <div id="chip-2" class="chip">
-      <img class="chip-img" src="images/chip.png" />
-    </div>
+        <!--Playing Chip-->
+        <div id="chip-2" class="chip">
+            <img class="chip-img" src="images/chip.png" />
+        </div>
 
-    <!--Playing Chip-->
-    <div id="won-chip-2" class="chip">
-      <img class="chip-img" src="images/chip.png" />
-    </div>
+        <!--Playing Chip-->
+        <div id="won-chip-2" class="chip">
+            <img class="chip-img" src="images/chip.png" />
+        </div>
 
-    <!--Playing Chip-->
-    <div id="chip-3" class="chip">
-      <img class="chip-img" src="images/chip.png" />
-    </div>
+        <!--Playing Chip-->
+        <div id="chip-3" class="chip">
+            <img class="chip-img" src="images/chip.png" />
+        </div>
 
-    <!--Playing Chip-->
-    <div id="chip-4" class="chip">
-      <img class="chip-img" src="images/chip.png" />
-    </div>
+        <!--Playing Chip-->
+        <div id="chip-4" class="chip">
+            <img class="chip-img" src="images/chip.png" />
+        </div>
 
-    <!--Option to Start Over-->
-    <div id="end-link" class="link">
-      <a href="index.html">Leave Game</a>
-    </div>
-  </body>
+        <!--Option to Start Over-->
+        <div id="end-link" class="link">
+            <a href="index.html">Leave Game</a>
+        </div>
+    </body>
 </html>
