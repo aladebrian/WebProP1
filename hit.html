@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Blackjack Animation: Hit</title>
+
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="game-layout.css">
+
+        <style>
+            /* reuse animations to set page to exactly as before */
+            @keyframes heart-6-move {
+                0% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                1% {
+                    left: 55vw;
+                }
+                
+                2% {
+                    z-index: 2;
+                    left: 50vw;
+                }
+                
+                3% {
+                    left: 50vw;
+                }
+                
+                4% {
+                    z-index: 1;
+                    left: 50vw;
+                }
+                
+                5% {
+                    left: 55vw;
+                }
+                
+                6% {
+                    z-index: 2;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, 0) rotateY(180deg);
+                }
+                
+                7% {
+                    transform: translate(0, -20vh) rotateY(180deg);
+                }
+                
+                11% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                11.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                11.5% {
+                    background-image: none;
+                }
+                
+                12% {
+                    left: 21vw;
+                    top: 47vh;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);
+                }
+                
+                100% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);
+                    background-image: none;
+                    left: 21vw;
+                    top: 47vh;
+                }
+            }
+            
+            @keyframes heart-6-contents {
+                0% {
+                    display: none;
+                }
+                
+                11.49% {
+                    display: none;
+                }
+                
+                11.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #heart-6 {
+                animation-name: heart-6-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #heart-6 span {
+                animation-name: heart-6-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes spade-7-move {
+                0% {
+                    z-index: 2;
+                    transform: rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                1% {
+                    left: 50vw;
+                }
+                
+                2% {
+                    z-index: 1;
+                    left: 50vw;
+                }
+                
+                3% {
+                    left: 55vw;
+                }
+                
+                4% {
+                    z-index: 2;
+                    left: 50vw;
+                }
+                
+                5% {
+                    left: 50vw;
+                }
+                
+                6% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, 0) rotateY(180deg);
+                }
+                
+                7% {
+                    transform: translate(0, -20vh) rotateY(180deg);
+                }
+                
+                12% {
+                    z-index: 2;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                12.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                12.5% {
+                    background-image: none;
+                }
+                
+                13% {
+                    left: 23vw;
+                    top: 47.7vh;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);
+                }
+                
+                100% {
+                    z-index: 2;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);
+                    background-image: none;
+                    left: 23vw;
+                    top: 47.7vh;
+                }
+            }
+            
+            @keyframes spade-7-contents {
+                0% {
+                    display: none;
+                }
+                
+                12.49% {
+                    display: none;
+                }
+                
+                12.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #spade-7 {
+                animation-name: spade-7-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #spade-7 span {
+                animation-name: spade-7-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes spade-9-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                21% {
+                    z-index: 3;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                21.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                21.5% {
+                    background-image: none;
+                }
+                
+                22% {
+                    left: 25vw;
+                    top: 48.4vh;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);
+                }
+                
+                100% {
+                    z-index: 3;
+                    transform: translate(0, 0) rotateY(0) rotate(12deg);;
+                    background-image: none;
+                    left: 25vw;
+                    top: 48.4vh;
+                }
+            }
+            
+            @keyframes spade-9-contents {
+                0% {
+                    display: none;
+                }
+                
+                21.49% {
+                    display: none;
+                }
+                
+                21.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #spade-9 {
+                animation-name: spade-9-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #spade-9 span {
+                animation-name: spade-9-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes diamond-8-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                13% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                13.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                13.5% {
+                    background-image: none;
+                }
+                
+                14% {
+                    left: 33.5vw;
+                    top: 51vh;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);
+                }
+                
+                100% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);
+                    background-image: none;
+                    left: 33.5vw;
+                    top: 51vh;
+                }
+            }
+            
+            @keyframes diamond-8-contents {
+                0% {
+                    display: none;
+                }
+                
+                13.49% {
+                    display: none;
+                }
+                
+                13.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #diamond-8 {
+                animation-name: diamond-8-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #diamond-8 span {
+                animation-name: diamond-8-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes spade-8-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                14% {
+                    z-index: 2;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                14.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                14.5% {
+                    background-image: none;
+                }
+                
+                15% {
+                    left: 35.5vw;
+                    top: 51.5vh;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);
+                }
+                
+                100% {
+                    z-index: 2;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);
+                    background-image: none;
+                    left: 35.5vw;
+                    top: 51.5vh;
+                }
+            }
+            
+            @keyframes spade-8-contents {
+                0% {
+                    display: none;
+                }
+                
+                14.49% {
+                    display: none;
+                }
+                
+                14.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #spade-8 {
+                animation-name: spade-8-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #spade-8 span {
+                animation-name: spade-8-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes diamond-3-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                23% {
+                    z-index: 3;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                23.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                23.5% {
+                    background-image: none;
+                }
+                
+                24% {
+                    left: 37.5vw;
+                    top: 52vh;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);
+                }
+                
+                100% {
+                    z-index: 3;
+                    transform: translate(0, 0) rotateY(0) rotate(6deg);;
+                    background-image: none;
+                    left: 37.5vw;
+                    top: 52vh;
+                }
+            }
+            
+            @keyframes diamond-3-contents {
+                0% {
+                    display: none;
+                }
+                
+                22.49% {
+                    display: none;
+                }
+                
+                22.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #diamond-3 {
+                animation-name: diamond-3-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #diamond-3 span {
+                animation-name: diamond-3-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes heart-1-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                15% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                15.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                15.5% {
+                    background-image: none;
+                }
+                
+                16% {
+                    left: 46vw;
+                    top: 52.5vh;
+                    transform: translate(0, 0) rotateY(0);
+                }
+                
+                100% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(0);
+                    background-image: none;
+                    left: 46vw;
+                    top: 52.5vh;
+                }
+            }
+            
+            @keyframes heart-1-contents {
+                0% {
+                    display: none;
+                }
+                
+                15.49% {
+                    display: none;
+                }
+                
+                15.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #heart-1 {
+                animation-name: heart-1-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #heart-1 span {
+                animation-name: heart-1-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes spade-K-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                16% {
+                    z-index: 2;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                16.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                16.5% {
+                    background-image: none;
+                }
+                
+                17% {
+                    left: 48vw;
+                    top: 52.5vh;
+                    transform: translate(0, 0) rotateY(0);
+                }
+                
+                100% {
+                    z-index: 2;
+                    transform: translate(0, 0) rotateY(0);
+                    background-image: none;
+                    left: 48vw;
+                    top: 52.5vh;
+                }
+            }
+            
+            @keyframes spade-K-contents {
+                0% {
+                    display: none;
+                }
+                
+                16.49% {
+                    display: none;
+                }
+                
+                16.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #spade-K {
+                animation-name: spade-K-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #spade-K span {
+                animation-name: spade-K-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes diamond-J-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                17% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                17.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                17.5% {
+                    background-image: none;
+                }
+                
+                18% {
+                    left: 58.5vw;
+                    top: 51.5vh;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                }
+                
+                100% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                    background-image: none;
+                    left: 58.5vw;
+                    top: 51.5vh;
+                }
+            }
+            
+            @keyframes diamond-J-contents {
+                0% {
+                    display: none;
+                }
+                
+                17.49% {
+                    display: none;
+                }
+                
+                17.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #diamond-J {
+                animation-name: diamond-J-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #diamond-J span {
+                animation-name: diamond-J-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes spade-2-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                18% {
+                    z-index: 2;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                18.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                18.5% {
+                    background-image: none;
+                }
+                
+                19% {
+                    left: 60.5vw;
+                    top: 51vh;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                }
+                
+                100% {
+                    z-index: 2;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                    background-image: none;
+                    left: 60.5vw;
+                    top: 51vh;
+                }
+            }
+            
+            @keyframes spade-2-contents {
+                0% {
+                    display: none;
+                }
+                
+                18.49% {
+                    display: none;
+                }
+                
+                18.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #spade-2 {
+                animation-name: spade-2-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #spade-2 span {
+                animation-name: spade-2-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes diamond-6-move {
+                0% {
+                    z-index: 2;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                19% {
+                    z-index: 1;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                19.49% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                19.5% {
+                    background-image: none;
+                }
+                
+                20% {
+                    left: 48vw;
+                    top: 3vh;
+                    transform: translate(0, 0) rotateY(0);
+                }
+                
+                100% {
+                    z-index: 2;
+                    transform: translate(0, 0) rotateY(0);
+                    background-image: none;
+                    left: 48vw;
+                    top: 3vh;
+                }
+            }
+            
+            @keyframes diamond-6-contents {
+                0% {
+                    display: none;
+                }
+                
+                19.49% {
+                    display: none;
+                }
+                
+                19.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #diamond-6 {
+                animation-name: diamond-6-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #diamond-6 span {
+                animation-name: diamond-6-contents;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes heart-A-move {
+                0% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 52vw;
+                    top: 3vh;
+                }
+
+                45% {
+                    background-image: url("cardback.jpg");
+                    transform: translate(0, 0) rotateY(180deg);
+                }
+
+                50% {
+                    background-image: none;
+                    left: 52vw;
+                    top: 3vh;
+                    transform: translate(0, 0) rotateY(0deg);
+                }
+                
+                100% {
+                    z-index: 1;
+                    transform: translate(0, 0) rotateY(0deg);
+                    background-image: none;
+                    background-size: 100% 100%;
+                    left: 52vw;
+                    top: 3vh;
+                }
+            }
+
+            @keyframes heart-A-contents{
+                0% {
+                    opacity: 0;
+                }
+                
+                47.49% {
+                    opacity: 0;
+                }
+                
+                47.5% {
+                    opacity: 100;
+                }
+                
+                100% {
+                    opacity: 100;
+                }
+            }
+            
+            #heart-A {
+                animation-name: heart-A-move;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #heart-A span {
+                animation-name: heart-A-contents;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes chip-1-move {
+                0% {
+                    display: none;
+                    transform: translate(0, 20vh);
+                    left: 22vw;
+                    bottom: 5vh;
+                }
+                
+                7% {
+                    display: none;
+                    transform: translate(0, 20vh);
+                    bottom: 5vh;
+                }
+                
+                8% {
+                    display: initial;
+                    transform: translate(0, 0);
+                    bottom: 33vh;
+                }
+                
+                22% {
+                    display: initial;
+                    transform: translate(0, 0);
+                    bottom: 33vh;
+                    left: 22vw;
+                }
+                
+                23% {
+                    display: initial;
+                    left: 50vw;
+                    bottom: 90vh;
+                    transform: translate(0, -20vh);
+                }
+                
+                100% {
+                    display: none;
+                    transform: translate(0, -20vh);
+                    left: 50vw;
+                    bottom: 90vh;
+                }
+            }
+            
+            #chip-1 {
+                animation-name: chip-1-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes chip-2-move {
+                0% {
+                    display: none;
+                    left: 35vw;
+                    bottom: -10vh;
+                }
+                
+                8% {
+                    display: none;
+                    bottom: -10vh;
+                }
+                
+                9% {
+                    display: initial;
+                    bottom: 29vh;
+                }
+                
+                22% {
+                    display: initial;
+                    bottom: 29vh;
+                }
+                
+                100% {
+                    display: initial;
+                    left: 35vw;
+                    bottom: 29vh;
+                }
+            }
+            
+            #chip-2 {
+                animation-name: chip-2-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes chip-3-move {
+                0% {
+                    display: none;
+                    left: 48.2vw;
+                    bottom: -10vh;
+                }
+                
+                9% {
+                    display: none;
+                    bottom: -10vh;
+                }
+                
+                10% {
+                    display: initial;
+                    bottom: 27.5vh;
+                }
+                
+                100% {
+                    display: initial;
+                    left: 48.2vw;
+                    bottom: 27.5vh;
+                }
+            }
+            
+            #chip-3 {
+                animation-name: chip-3-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes chip-4-move {
+                0% {
+                    display: none;
+                    left: 61.5vw;
+                    bottom: -10vh;
+                }
+                
+                10% {
+                    display: none;
+                    bottom: -10vh;
+                }
+                
+                11% {
+                    display: initial;
+                    bottom: 29vh;
+                }
+                
+                100% {
+                    display: initial;
+                    left: 61.5vw;
+                    bottom: 29vh;
+                }
+            }
+            
+            #chip-4 {
+                animation-name: chip-4-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes link-move {
+                0% {
+                    display: none;
+                    top: 120vh;
+                }
+                
+                24% {
+                    display: none;
+                    top: 120vh;
+                }
+                
+                25% {
+                    display: block;
+                    top: 87vh;
+                }
+                
+                100% {
+                    display: block;
+                    top: 87vh;
+                }
+            }
+            
+            .link {
+                animation-name: link-move;
+                animation-duration: 0.01s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            /* hit animations */
+            @keyframes club-Q-move {
+                0% {
+                    z-index: 3;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-size: 100% 100%;
+                    background-image: url("cardback.jpg");
+                    left: 50vw;
+                    top: -20vh;
+                }
+
+                10% {
+                    z-index: 3;
+                    left: 50vw;
+                    top: -5vh;
+                    transform: translate(0, -10vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                15.5% {
+                    background-image: none;
+                    transform: translate(0, 0vh) rotateY(90deg);
+                }
+                
+                16% {
+                    left: 50vw;
+                    top: 52.5vh;
+                    transform: translate(0, 0) rotateY(0);
+                }
+                
+                100% {
+                    z-index: 3;
+                    transform: translate(0, 0) rotateY(0);
+                    background-image: none;
+                    left: 50vw;
+                    top: 52.5vh;
+                }
+            }
+            
+            @keyframes club-Q-contents {
+                0% {
+                    display: none;
+                }
+                
+                15.49% {
+                    display: none;
+                }
+                
+                15.5% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #club-Q {
+                animation-name: club-Q-move;
+                animation-duration: 8s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #club-Q span {
+                animation-name: club-Q-contents;
+                animation-duration: 8s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+
+            @keyframes club-5-move {
+                0% {
+                    z-index: 3;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                    background-size: 100% 100%;
+                    left: 50vw;
+                    top: 5vh;
+                }
+                
+                25% {
+                    z-index: 3;
+                    left: 50vw;
+                    top: 5vh;
+                    transform: translate(0, -20vh) rotateY(180deg);
+                    background-image: url("cardback.jpg");
+                }
+                
+                30.5% {
+                    background-image: url("cardback.jpg");
+                }
+                
+                31% {
+                    background-image: none;
+                }
+                
+                32% {
+                    left: 62.5vw;
+                    top: 50.5vh;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                }
+                
+                100% {
+                    z-index: 3;
+                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
+                    background-image: none;
+                    left: 62.5vw;
+                    top: 50.5vh;
+                }
+            }
+            
+            @keyframes club-5-contents {
+                0% {
+                    display: none;
+                }
+                
+                30.98% {
+                    display: none;
+                }
+                
+                31% {
+                    display: initial;
+                }
+                
+                100% {
+                    display: initial;
+                }
+            }
+            
+            #club-5 {
+                animation-name: club-5-move;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
+            #club-5 span {
+                animation-name: club-5-contents;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+        <!--Player 1 Nametage-->
+        <div id="player-1">
+            <p>
+                1
+            </p>
+        
+        </div>
+        
+        <!--Player 2 Nametage-->
+        <div id="player-2">
+            <p>
+                2
+            </p>
+        
+        </div>
+        
+        <!--Player 3 Nametage-->
+        <div id="player-3">
+            <p>
+                3<br>
+                (You)
+            </p>
+        
+        </div>
+        
+        <!--Player 4 Nametage-->
+        <div id="player-4">
+            <p>
+                4
+            </p>
+        
+        </div>
+        
+        <!--6 of Hearts-->
+        <div id="heart-6" class="heart">
+            <span class="value">6</span>
+            
+            <span class="top-suit">&#9829;</span>
+         
+            <span class="bottom-suit">&#9829;</span>
+         
+        </div>
+        
+        <!--7 of Spades-->
+        <div id="spade-7" class="spade">
+            <span class="value">7</span>
+            
+            <span class="top-suit">&#9824;</span>
+         
+            <span class="bottom-suit">&#9824;</span>
+         
+        </div>
+        
+        <!--9 of Spades-->
+        <div id="spade-9" class="spade">
+            <span class="value">9</span>
+            
+            <span class="top-suit">&#9824;</span>
+         
+            <span class="bottom-suit">&#9824;</span>
+            
+        </div>
+        
+        <!--8 of Diamonds-->
+        <div id="diamond-8" class="diamond">
+            <span class="value">8</span>
+            
+            <span class="top-suit">&#9830;</span>
+         
+            <span class="bottom-suit">&#9830;</span>
+        
+        </div>
+        
+        <!--8 of Spades-->
+        <div id="spade-8" class="spade">
+            <span class="value">8</span>
+            
+            <span class="top-suit">&#9824;</span>
+         
+            <span class="bottom-suit">&#9824;</span>
+        
+        </div>
+        
+        <!--3 of Diamonds-->
+        <div id="diamond-3" class="diamond">
+            <span class="value">3</span>
+            
+            <span class="top-suit">&#9830;</span>
+         
+            <span class="bottom-suit">&#9830;</span>
+        
+        </div>
+        
+        <!--1 of Hearts-->
+        <div id="heart-1" class="heart">
+            <span class="value">1</span>
+            
+            <span class="top-suit">&#9829;</span>
+         
+            <span class="bottom-suit">&#9829;</span>
+         
+        </div>
+        
+        <!--King of Spades-->
+        <div id="spade-K" class="spade">
+            <span class="value">K</span>
+            
+            <span class="top-suit">&#9824;</span>
+         
+            <span class="bottom-suit">&#9824;</span>
+         
+        </div>
+        
+        <!--Jack of Diamonds-->
+        <div id="diamond-J" class="diamond">
+            <span class="value">J</span>
+            
+            <span class="top-suit">&#9830;</span>
+         
+            <span class="bottom-suit">&#9830;</span>
+         
+        </div>
+        
+        <!--2 of Spades-->
+        <div id="spade-2" class="spade">
+            <span class="value">2</span>
+            
+            <span class="top-suit">&#9824;</span>
+         
+            <span class="bottom-suit">&#9824;</span>
+         
+        </div>
+        
+        <!--6 of Diamonds-->
+        <div id="diamond-6" class="diamond">
+            <span class="value">6</span>
+            
+            <span class="top-suit">&#9830;</span>
+         
+            <span class="bottom-suit">&#9830;</span>
+         
+        </div>
+        
+        <!--Ace of Hearts-->
+        <div id="heart-A" class="heart">
+            <span class="value">A</span>
+            
+            <span class="top-suit">&#9829;</span>
+         
+            <span class="bottom-suit">&#9829;</span>
+         
+        </div>
+        
+        <!--Playing Chip-->
+        <div id="chip-1" class="chip">
+            <img class="chip-img" src="chip.png">
+        
+        </div>
+        
+        <!--Playing Chip-->
+        <div id="chip-2" class="chip">
+            <img class="chip-img" src="chip.png">
+        
+        </div>
+        
+        <!--Playing Chip-->
+        <div id="chip-3" class="chip">
+            <img class="chip-img" src="chip.png">
+        
+        </div>
+        
+        <!--Playing Chip-->
+        <div id="chip-4" class="chip">
+            <img class="chip-img" src="chip.png">
+        
+        </div>
+        
+        <!--Option to Stand-->
+        <div id="stand-link" class="link">
+            <a href="stand.html">Stand</a>
+        
+        </div>
+        
+        <!--Option to Hit-->
+        <div id="hit-link" class="link">
+            <a href="hit.html">Hit</a>
+        
+        </div>
+
+        <!-- Queen of clubs -->
+        <div id="club-Q" class="club">
+            <span class="value">Q</span>
+            
+            <span class="top-suit">&#9827;</span>
+         
+            <span class="bottom-suit">&#9827;</span>
+        </div>
+
+        <!-- 5 of clubs-->
+        <div id = "club-5" class="club">
+            <span class="value">5</span>
+            
+            <span class="top-suit">&#9827;</span>
+         
+            <span class="bottom-suit">&#9827;</span>
+        </div>
+    
+    </body>
+    
+</html>
