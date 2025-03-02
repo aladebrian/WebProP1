@@ -1295,6 +1295,72 @@
                 animation-fill-mode: both;
             }
 
+            @keyframes chip-5-move {
+                0% {
+                    display: none;
+                    left: 33.5vw;
+                    bottom: -10vh;
+                }
+                
+                55% {
+                    display: none;
+                    bottom: -10vh;
+                }
+                
+                65% {
+                    display: initial;
+                    bottom: 23vh;
+                }
+                
+                
+                100% {
+                    display: initial;
+                    left: 33.5vw;
+                    bottom: 23vh;
+                }
+            }
+            
+            #chip-5 {
+                animation-name: chip-5-move;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+
+            @keyframes chip-6-move {
+                0% {
+                    display: none;
+                    left: 48.2vw;
+                    bottom: -10vh;
+                }
+                
+                65% {
+                    display: none;
+                    bottom: -10vh;
+                }
+                
+                75% {
+                    display: initial;
+                    bottom: 21vh;
+                }
+                
+                
+                100% {
+                    display: initial;
+                    left: 48.2vw;
+                    bottom: 21vh;
+                }
+            }
+            
+            #chip-6 {
+                animation-name: chip-6-move;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+            }
+            
         </style>
         
     </head>
@@ -1505,6 +1571,16 @@
             <span class="top-suit">&#9827;</span>
          
             <span class="bottom-suit">&#9827;</span>
+        </div>
+
+        <div id="chip-5" class="chip">
+            <img class="chip-img" src="chip.png">
+        
+        </div>
+
+        <div id="chip-6" class="chip">
+            <img class="chip-img" src="chip.png">
+        
         </div>
     
     </body>
