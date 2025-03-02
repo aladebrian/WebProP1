@@ -1,620 +1,179 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <title>Blackjack Animation: Game Start</title>
+  <head>
+    <title>Blackjack Animation: Game Start</title>
 
-        <meta charset="UTF-8">
-        
-        <link rel="stylesheet" type="text/css" href="game-layout.css">
-        
-        <style>
-            #heart-6 {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(0) rotate(12deg);
-                background-image: none;
-                left: 21vw;
-                top: 47vh;
-            }
-            
-            #spade-7 {
-                z-index: 2;
-                transform: translate(0, 0) rotateY(0) rotate(12deg);
-                background-image: none;
-                left: 23vw;
-                top: 47.7vh;
-            }
-            
-            #spade-9 {
-                z-index: 3;
-                transform: translate(0, 0) rotateY(0) rotate(12deg);;
-                background-image: none;
-                left: 25vw;
-                top: 48.4vh;
-            }
-            
-            #diamond-8 {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(0) rotate(6deg);
-                background-image: none;
-                left: 33.5vw;
-                top: 51vh;
-            }
-            
-            #spade-8 {
-                z-index: 2;
-                transform: translate(0, 0) rotateY(0) rotate(6deg);
-                background-image: none;
-                left: 35.5vw;
-                top: 51.5vh;
-            }
-            
-            #diamond-3 {
-                z-index: 3;
-                transform: translate(0, 0) rotateY(0) rotate(6deg);;
-                background-image: none;
-                left: 37.5vw;
-                top: 52vh;
-            }
-            
-            #heart-1 {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(0);
-                background-image: none;
-                left: 46vw;
-                top: 52.5vh;
-            }
-            
-            #spade-K {
-                z-index: 2;
-                transform: translate(0, 0) rotateY(0);
-                background-image: none;
-                left: 48vw;
-                top: 52.5vh;
-            }
-            
-            #diamond-J {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(0) rotate(-6deg);
-                background-image: none;
-                left: 58.5vw;
-                top: 51.5vh;
-            }
-            
-            #spade-2 {
-                z-index: 2;
-                transform: translate(0, 0) rotateY(0) rotate(-6deg);
-                background-image: none;
-                left: 60.5vw;
-                top: 51vh;
-            }
-            
-            @keyframes spade-Q-move {
-                0% {
-                    z-index: 1;
-                    transform: translate(0, -20vh) rotateY(180deg);
-                    background-image: url("cardback.jpg");
-                    background-size: 100% 100%;
-                    left: 50vw;
-                    top: 5vh;
-                }
-                
-                0.49% {
-                    background-image: url("cardback.jpg");
-                }
-                
-                0.5% {
-                    background-image: none;
-                }
-                
-                1% {
-                    z-index: 3;
-                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
-                    left: 62.5vw;
-                    top: 50.5vh;
-                }
-                
-                100% {
-                    z-index: 3;
-                    transform: translate(0, 0) rotateY(0) rotate(-6deg);
-                    background-image: none;
-                    left: 62.5vw;
-                    top: 50.5vh;
-                }
-            }
-            
-            @keyframes spade-Q-contents {
-                0% {
-                    display: none;
-                }
-                
-                0.49% {
-                    display: none;
-                }
-                
-                0.5% {
-                    display: initial;
-                }
-                
-                100% {
-                    display: initial;
-                }
-            }
-            
-            #spade-Q {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(180deg);
-                background-image: url("cardback.jpg");
-                background-size: 100% 100%;
-                left: 50vw;
-                top: 5vh;
-                animation-name: spade-Q-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            #spade-Q span {
-                animation-name: spade-Q-contents;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            #diamond-6 {
-                z-index: 2;
-                transform: translate(0, 0) rotateY(0);
-                background-image: none;
-                left: 48vw;
-                top: 3vh;
-            }
-            
-            @keyframes heart-A-move {
-                0% {
-                    z-index: 1;
-                    transform: translate(0, 0) rotateY(180deg);
-                    background-image: url("cardback.jpg");
-                    background-size: 100% 100%;
-                    left: 52vw;
-                    top: 3vh;
-                }
-                
-                2% {
-                    z-index: 1;
-                    transform: translate(0, 0) rotateY(180deg);
-                    background-image: url("cardback.jpg");
-                    background-size: 100% 100%;
-                    left: 52vw;
-                    top: 3vh;
-                }
-                
-                2.49% {
-                    background-image: url("cardback.jpg");
-                    background-size: 100% 100%;
-                }
-                
-                2.5% {
-                    background-image: none;
-                }
-                
-                3% {
-                    transform: translate(0, 0) rotateY(0);
-                }
-                
-                100% {
-                    z-index: 1;
-                    transform: translate(0, 0) rotateY(0);
-                    background-image: none;
-                    left: 52vw;
-                    top: 3vh;
-                }
-            }
-            
-            @keyframes heart-A-contents {
-                0% {
-                    display: none;
-                }
-                
-                2.49% {
-                    display: none;
-                }
-                
-                2.5% {
-                    display: initial;
-                }
-                
-                100% {
-                    display: initial;
-                }
-            }
-            
-            #heart-A {
-                z-index: 1;
-                transform: translate(0, 0) rotateY(180deg);
-                background-image: url("cardback.jpg");
-                background-size: 100% 100%;
-                left: 52vw;
-                top: 3vh;
-                animation-name: heart-A-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            #heart-A span {
-                animation-name: heart-A-contents;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            #chip-2 {
-                display: initial;
-                left: 35vw;
-                bottom: 29vh;
-            }
-            
-            @keyframes won-chip-2-move {
-                0% {
-                    display: none;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-                
-                3% {
-                    display: initial;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-                
-                4% {
-                    left: 34.5vw;
-                    bottom: 22vh;
-                    transform: translate(0, 0);
-                }
-                
-                100% {
-                    display: initial;
-                    left: 34.5vw;
-                    bottom: 22vh;
-                    transform: translate(0, 0);
-                }
-            }
-            
-            #won-chip-2 {
-                left: 50vw;
-                bottom: 90vh;
-                transform: translate(0, -20vh);
-                animation-name: won-chip-2-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            @keyframes chip-3-move {
-                0% {
-                    display: initial;
-                    left: 48.2vw;
-                    bottom: 27.5vh;
-                    transform: translate(0, 0);
-                }
-                
-                4% {
-                    display: initial;
-                    left: 48.2vw;
-                    bottom: 27.5vh;
-                    transform: translate(0, 0);
-                }
-                
-                5% {
-                    display: initial;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-                
-                100% {
-                    display: none;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-            }
-            
-            #chip-3 {
-                display: initial;
-                left: 48.2vw;
-                bottom: 27.5vh;
-                animation-name: chip-3-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            @keyframes chip-4-move {
-                0% {
-                    display: initial;
-                    left: 61.5vw;
-                    bottom: 29vh;
-                    transform: translate(0, 0);
-                }
-                
-                1% {
-                    display: initial;
-                    left: 61.5vw;
-                    bottom: 29vh;
-                    transform: translate(0, 0);
-                }
-                
-                2% {
-                    display: initial;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-                
-                100% {
-                    display: none;
-                    left: 50vw;
-                    bottom: 90vh;
-                    transform: translate(0, -20vh);
-                }
-            
-            }
-            
-            #chip-4 {
-                display: initial;
-                left: 61.5vw;
-                bottom: 29vh;
-                animation-name: chip-4-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            @keyframes end-link-move {
-                0% {
-                    display: none;
-                    top: 120vh;
-                }
-                
-                5% {
-                    display: none;
-                    top: 120vh;
-                }
-                
-                6% {
-                    display: block;
-                    top: 87vh;
-                }
-                
-                100% {
-                    display: block;
-                    top: 87vh;
-                }
-            }
-            
-            #end-link {
-                left: 7vw;
-                animation-name: end-link-move;
-                animation-duration: 30s;
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-fill-mode: both;
-            }
-            
-            #end-link a {
-                background-color: #D3D3D3;
-                width: 12vw;
-            }
-        
-        </style>
-        
-    </head>
-    
-    <body>
-        <!--Player 1 Nametage-->
-        <div id="player-1">
-            <p>
-                1
-            </p>
-        
-        </div>
-        
-        <!--Player 2 Nametage-->
-        <div id="player-2">
-            <p>
-                2
-            </p>
-        
-        </div>
-        
-        <!--Player 3 Nametage-->
-        <div id="player-3">
-            <p>
-                3<br>
-                (You)
-            </p>
-        
-        </div>
-        
-        <!--Player 4 Nametage-->
-        <div id="player-4">
-            <p>
-                4
-            </p>
-        
-        </div>
-        
-        <!--6 of Hearts-->
-        <div id="heart-6" class="heart">
-            <span class="value">6</span>
-            
-            <span class="top-suit">&#9829;</span>
-         
-            <span class="bottom-suit">&#9829;</span>
-         
-        </div>
-        
-        <!--7 of Spades-->
-        <div id="spade-7" class="spade">
-            <span class="value">7</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-         
-        </div>
-        
-        <!--9 of Spades-->
-        <div id="spade-9" class="spade">
-            <span class="value">9</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-            
-        </div>
-        
-        <!--8 of Diamonds-->
-        <div id="diamond-8" class="diamond">
-            <span class="value">8</span>
-            
-            <span class="top-suit">&#9830;</span>
-         
-            <span class="bottom-suit">&#9830;</span>
-        
-        </div>
-        
-        <!--8 of Spades-->
-        <div id="spade-8" class="spade">
-            <span class="value">8</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-        
-        </div>
-        
-        <!--3 of Diamonds-->
-        <div id="diamond-3" class="diamond">
-            <span class="value">3</span>
-            
-            <span class="top-suit">&#9830;</span>
-         
-            <span class="bottom-suit">&#9830;</span>
-        
-        </div>
-        
-        <!--1 of Hearts-->
-        <div id="heart-1" class="heart">
-            <span class="value">1</span>
-            
-            <span class="top-suit">&#9829;</span>
-         
-            <span class="bottom-suit">&#9829;</span>
-         
-        </div>
-        
-        <!--King of Spades-->
-        <div id="spade-K" class="spade">
-            <span class="value">K</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-         
-        </div>
-        
-        <!--Jack of Diamonds-->
-        <div id="diamond-J" class="diamond">
-            <span class="value">J</span>
-            
-            <span class="top-suit">&#9830;</span>
-         
-            <span class="bottom-suit">&#9830;</span>
-         
-        </div>
-        
-        <!--2 of Spades-->
-        <div id="spade-2" class="spade">
-            <span class="value">2</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-         
-        </div>
-        
-        <!--Queen of Spades-->
-        <div id="spade-Q" class="spade">
-            <span class="value">Q</span>
-            
-            <span class="top-suit">&#9824;</span>
-         
-            <span class="bottom-suit">&#9824;</span>
-         
-        </div>
-        
-        <!--6 of Diamonds-->
-        <div id="diamond-6" class="diamond">
-            <span class="value">6</span>
-            
-            <span class="top-suit">&#9830;</span>
-         
-            <span class="bottom-suit">&#9830;</span>
-         
-        </div>
-        
-        <!--Ace of Hearts-->
-        <div id="heart-A" class="heart">
-            <span class="value">A</span>
-            
-            <span class="top-suit">&#9829;</span>
-         
-            <span class="bottom-suit">&#9829;</span>
-         
-        </div>
-        
-        <!--Playing Chip-->
-        <div id="chip-2" class="chip">
-            <img class="chip-img" src="chip.png">
-        
-        </div>
-        
-        <!--Playing Chip-->
-        <div id="won-chip-2" class="chip">
-            <img class="chip-img" src="chip.png">
-        
-        </div>
-        
-        <!--Playing Chip-->
-        <div id="chip-3" class="chip">
-            <img class="chip-img" src="chip.png">
-        
-        </div>
-        
-        <!--Playing Chip-->
-        <div id="chip-4" class="chip">
-            <img class="chip-img" src="chip.png">
-        
-        </div>
-        
-        <!--Option to Start Over-->
-        <div id="end-link" class="link">
-            <a href="index.html">Leave Game</a>
-        
-        </div>
-        
-    </body>
-    
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="game-layout.css" />
+    <link rel="stylesheet" type="text/css" href="stand-animation.css" />
+  </head>
+
+  <body>
+    <!--Player 1 Nametage-->
+    <div id="player-1">
+      <p>1</p>
+    </div>
+
+    <!--Player 2 Nametage-->
+    <div id="player-2">
+      <p>2</p>
+    </div>
+
+    <!--Player 3 Nametage-->
+    <div id="player-3">
+      <p>
+        3<br />
+        (You)
+      </p>
+    </div>
+
+    <!--Player 4 Nametage-->
+    <div id="player-4">
+      <p>4</p>
+    </div>
+
+    <!--6 of Hearts-->
+    <div id="heart-6" class="heart">
+      <span class="value">6</span>
+
+      <span class="top-suit">&#9829;</span>
+
+      <span class="bottom-suit">&#9829;</span>
+    </div>
+
+    <!--7 of Spades-->
+    <div id="spade-7" class="spade">
+      <span class="value">7</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--9 of Spades-->
+    <div id="spade-9" class="spade">
+      <span class="value">9</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--8 of Diamonds-->
+    <div id="diamond-8" class="diamond">
+      <span class="value">8</span>
+
+      <span class="top-suit">&#9830;</span>
+
+      <span class="bottom-suit">&#9830;</span>
+    </div>
+
+    <!--8 of Spades-->
+    <div id="spade-8" class="spade">
+      <span class="value">8</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--3 of Diamonds-->
+    <div id="diamond-3" class="diamond">
+      <span class="value">3</span>
+
+      <span class="top-suit">&#9830;</span>
+
+      <span class="bottom-suit">&#9830;</span>
+    </div>
+
+    <!--1 of Hearts-->
+    <div id="heart-1" class="heart">
+      <span class="value">1</span>
+
+      <span class="top-suit">&#9829;</span>
+
+      <span class="bottom-suit">&#9829;</span>
+    </div>
+
+    <!--King of Spades-->
+    <div id="spade-K" class="spade">
+      <span class="value">K</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--Jack of Diamonds-->
+    <div id="diamond-J" class="diamond">
+      <span class="value">J</span>
+
+      <span class="top-suit">&#9830;</span>
+
+      <span class="bottom-suit">&#9830;</span>
+    </div>
+
+    <!--2 of Spades-->
+    <div id="spade-2" class="spade">
+      <span class="value">2</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--Queen of Spades-->
+    <div id="spade-Q" class="spade">
+      <span class="value">Q</span>
+
+      <span class="top-suit">&#9824;</span>
+
+      <span class="bottom-suit">&#9824;</span>
+    </div>
+
+    <!--6 of Diamonds-->
+    <div id="diamond-6" class="diamond">
+      <span class="value">6</span>
+
+      <span class="top-suit">&#9830;</span>
+
+      <span class="bottom-suit">&#9830;</span>
+    </div>
+
+    <!--Ace of Hearts-->
+    <div id="heart-A" class="heart">
+      <span class="value">A</span>
+
+      <span class="top-suit">&#9829;</span>
+
+      <span class="bottom-suit">&#9829;</span>
+    </div>
+
+    <!--Playing Chip-->
+    <div id="chip-2" class="chip">
+      <img class="chip-img" src="images/chip.png" />
+    </div>
+
+    <!--Playing Chip-->
+    <div id="won-chip-2" class="chip">
+      <img class="chip-img" src="images/chip.png" />
+    </div>
+
+    <!--Playing Chip-->
+    <div id="chip-3" class="chip">
+      <img class="chip-img" src="images/chip.png" />
+    </div>
+
+    <!--Playing Chip-->
+    <div id="chip-4" class="chip">
+      <img class="chip-img" src="images/chip.png" />
+    </div>
+
+    <!--Option to Start Over-->
+    <div id="end-link" class="link">
+      <a href="index.html">Leave Game</a>
+    </div>
+  </body>
 </html>

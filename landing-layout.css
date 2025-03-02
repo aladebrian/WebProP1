@@ -1,49 +1,49 @@
 body {
-    background-image: url("blank-board.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: Verdana, Tahoma, sans-serif;
+  background-image: url("images/blank-board.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 div {
-    text-align: center;
+  text-align: center;
 }
 
 #title {
-    position: absolute;
-    width: 60vw;
-    font-size: 1.75vw;
-    top: 10vh;
-    left: 20vw;
+  position: absolute;
+  width: 60vw;
+  font-size: 1.75vw;
+  top: 10vh;
+  left: 20vw;
 }
 
 #link {
-    position: absolute;
-    width: 20vw;
-    font-size: 1.5vw;
-    top: 50vh;
-    left: 40vw;
+  position: absolute;
+  width: 20vw;
+  font-size: 1.5vw;
+  top: 50vh;
+  left: 40vw;
 }
 
 h1 {
-    color: white;
+  color: white;
 }
 
 a {
-    text-decoration-line: none;
-    color: black;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 1.3vh;
-    padding-bottom: 1.3vh;
-    background-color: #D3D3D3;
-    border-style: solid;
-    border-radius: 1vw;
-    border-radius: 0.5vw;
+  text-decoration-line: none;
+  color: black;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1.3vh;
+  padding-bottom: 1.3vh;
+  background-color: #d3d3d3;
+  border-style: solid;
+  border-radius: 1vw;
+  border-radius: 0.5vw;
 }
 
 a:hover {
-    color: white;
-    border-color: black;
+  color: white;
+  border-color: black;
 }
