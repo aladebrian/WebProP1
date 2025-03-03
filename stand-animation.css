@@ -410,7 +410,6 @@ a:hover {
     color: white;
 }
 
-
 @keyframes value-dealer-1-pop {
     0% {
         opacity: 1;
@@ -460,6 +459,219 @@ a:hover {
 #value-dealer-2 {
     animation-name: value-dealer-2-pop;
     animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+/* Player 2 */
+@keyframes move-2-1-pop {
+    0% {
+        opacity: 1;
+    }
+
+    14% {
+        opacity: 1;
+    }
+
+    17% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+#move-2-1 {
+    animation-name: move-2-1-pop;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes move-2-2-pop {
+    0% {
+        opacity: 0;
+    }
+
+    16% {
+        opacity: 0;
+    }
+
+    19% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+#move-2-2 {
+    animation-name: move-2-2-pop;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+/* Player 3 */
+@keyframes move-3-1-pop {
+    0% {
+        opacity: 1;
+    }
+
+    18% {
+        opacity: 1;
+    }
+    21% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#move-3-1 {
+    animation-name: move-3-1-pop;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes move-3-2-pop {
+    0% {
+        opacity: 0;
+    }
+
+    21% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+#move-3-2 {
+    animation-name: move-3-2-pop;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+/* Player 4 */
+@keyframes value-4-1-pop {
+    0% {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 1;
+        display: block;
+    }
+    5% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        display: block;
+    }
+}
+
+#value-4-1 {
+    animation-name: value-4-1-pop;
+    animation-duration: 7.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes value-4-2-pop {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    4% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+#value-4-2 {
+    animation-name: value-4-2-pop;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+@keyframes move-4-1-pop {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 1;
+        display: block;
+    }
+
+    6% {
+        opacity: 1;
+    }
+    7% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        display: block;
+    }
+}
+
+#move-4-1 {
+    animation-name: move-4-1-pop;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes move-4-2-pop {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+    5% {
+        opacity: 0;
+    }
+
+    6% {
+        opacity: 1;
+    }
+}
+
+#move-4-2 {
+    animation-name: move-4-2-pop;
+    animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: both;
