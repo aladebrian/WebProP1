@@ -1744,3 +1744,59 @@ a:hover {
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
+
+@keyframes value-dealer-1-pop {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    87% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        display: none;
+    }
+}
+
+#value-dealer-1 {
+    animation-name: value-dealer-1-pop;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes value-dealer-2-pop {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    87% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+#value-dealer-2 {
+    animation-name: value-dealer-2-pop;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}

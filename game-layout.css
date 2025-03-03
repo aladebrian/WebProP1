@@ -56,6 +56,11 @@ p {
 #dealer {
     top: 12vh;
     left: 45.5vw;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 
 #decision {
@@ -64,10 +69,15 @@ p {
     font-size: 3vw;
     width: 50vw;
     height: 20vh;
-    line-height: 20vh;
-    top: 28vh;
-    left: 25vw;
+    line-height: 18vh;
+    top: 22vh;
+    left: 27vw;
     font-weight: bold;
+    text-shadow: 
+    -2px -2px 0 black,  
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
 }
 
 .values {
@@ -82,7 +92,7 @@ p {
     font-size: 2vw;
     width: 10vw;
     height: 15vh;
-    line-height: 15vh;
+    line-height: 0.3vh;
 }
 
 #value-1 {
@@ -108,6 +118,11 @@ p {
     transform: rotate(-6deg);
 }
 
+#value-dealer {
+    left: 45.5vw;
+    top: 25vh;
+}
+
 .moves {
     position: absolute;
     color: white;
@@ -119,7 +134,7 @@ p {
     font-size: 2vw;
     width: 10vw;
     height: 15vh;
-    line-height: 15vh;
+    line-height: 0.3vh;
     z-index: 10;
 }
 
