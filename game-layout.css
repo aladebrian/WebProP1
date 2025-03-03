@@ -120,6 +120,7 @@ p {
     width: 10vw;
     height: 15vh;
     line-height: 15vh;
+    z-index: 10;
 }
 
 #move-1 {
