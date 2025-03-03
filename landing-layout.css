@@ -1,5 +1,5 @@
 body {
-    background-image: url("blank-board.jpg");
+    background-image: url("images/blank-board.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -37,7 +37,7 @@ a {
     padding-right: 1vw;
     padding-top: 1.3vh;
     padding-bottom: 1.3vh;
-    background-color: #D3D3D3;
+    background-color: #d3d3d3;
     border-style: solid;
     border-radius: 1vw;
     border-radius: 0.5vw;
