@@ -641,18 +641,22 @@
 @keyframes heart-6-contents {
     0% {
         display: none;
+        opacity: 0;
     }
 
     11.49% {
         display: none;
+        opacity: 0;
     }
 
     11.5% {
         display: initial;
+        opacity: 1;
     }
 
     100% {
         display: initial;
+        opacity: 1;
     }
 }
 
@@ -749,18 +753,22 @@
 @keyframes spade-7-contents {
     0% {
         display: none;
+        opacity: 0;
     }
 
-    12.49% {
+    11.49% {
         display: none;
+        opacity: 0;
     }
 
-    12.5% {
+    11.5% {
         display: initial;
+        opacity: 1;
     }
 
     100% {
         display: initial;
+        opacity: 1;
     }
 }
 

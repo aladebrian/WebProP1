@@ -204,18 +204,22 @@
 @keyframes heart-A-contents {
     0% {
         display: none;
+        opacity: 0;
     }
 
     2.49% {
         display: none;
+        opacity: 0;
     }
 
     2.5% {
         display: initial;
+        opacity: 1;
     }
 
     100% {
         display: initial;
+        opacity: 1;
     }
 }
 
