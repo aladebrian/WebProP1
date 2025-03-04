@@ -1675,27 +1675,11 @@
 }
 
 .link {
-    position: absolute;
-    width: 10vw;
-    font-size: 1.5vw;
     animation-name: link-move;
     animation-duration: 45s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-}
-
-.link a {
-    display: block;
-    text-decoration-line: none;
-    color: black;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    width: 10vw;
-    border-style: solid;
-    border-color: black;
-    border-width: 0.3vw;
-    border-radius: 0.3vw;
 }
 
 #stand-link {
@@ -1714,10 +1698,7 @@
     background-color: #92d050;
 }
 
-a:hover {
-    color: white;
-    border-color: black;
-}
+
 
 @keyframes decision-pop {
     0% {

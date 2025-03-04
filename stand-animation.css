@@ -392,23 +392,18 @@
 }
 
 #end-link {
-    position: absolute;
     left: 10vw;
     animation-name: end-link-move;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+}
 
+a {
     background-color: #d3d3d3;
-    border-style: solid;
-    width: 7vw;
-    padding: 2vh 1.5vw;
 }
 
-a:hover {
-    color: white;
-}
 
 @keyframes value-dealer-1-pop {
     0% {

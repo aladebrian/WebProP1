@@ -219,3 +219,24 @@ p {
     width: 3.5vw;
     height: 7vh;
 }
+
+.link {
+    position: absolute;
+    width: auto;
+    font-size: 1.5vw;
+}
+
+a {
+    display: block;
+    text-decoration-line: none;
+    color: black;
+    padding: 1vh 0.5vh;
+    width: 11vw;
+    border: 0.3vw solid black;
+    border-radius: 0.3vw;
+}
+
+a:hover {
+    color: white;
+    border-color: black;
+}
