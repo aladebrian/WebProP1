@@ -18,7 +18,7 @@ div {
     left: 20vw;
 }
 
-#link {
+#start-link {
     position: absolute;
     width: 20vw;
     font-size: 1.5vw;
@@ -45,4 +45,12 @@ a {
 a:hover {
     color: white;
     border-color: black;
+}
+
+#credits {
+    position: absolute;
+    width: 10vh;
+    font-size: 1vw;
+    bottom: 2vh;
+    right: 3vh;
 }
